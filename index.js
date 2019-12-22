@@ -4,12 +4,10 @@ import View from './src/view.js';
 const root = document.querySelector('#root');
 
 const game = new Game();
-const view = new View(root, 320, 640, 20, 10);
+const view = new View(root, 480, 640, 20, 10);
 
 window.game = game;
 window.view = view;
-
-console.log(game.getState());
 
 document.addEventListener('keydown', event => {
     switch(event.keyCode) {
@@ -31,7 +29,3 @@ document.addEventListener('keydown', event => {
             break;
     }
 });
-
-view.renderPlayfiled(game.getState());
-
-console.log(game);
